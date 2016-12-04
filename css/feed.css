@@ -1,0 +1,77 @@
+html {
+  /*font: normal 14px / 20px "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+  font: normal 14px / 20px 'Roboto:300', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /*font: 'Roboto', sans-serif !important;*/
+}
+.background--turquoise {
+  background-color: #008C9D;
+  color: white;
+}
+.background {
+  padding: 50px 20px;
+}
+.background--postit {
+  background: url('../img/post-it.JPG');
+  background-size: 100%;
+  min-height: 300px;
+}
+.background--tablette {
+  background: url('img/tablette.JPG');
+  background-size: 100%;
+  min-height: 250px;
+}
+.text--white {
+  color: white;
+}
+.text--turquoise {
+  color: #008C9D;
+}
+.section-title {
+  margin-bottom: 50px;
+  text-align: center;
+}
+.subtitle__focus {
+  color: white;
+  font-weight: bold;
+  margin-top: 40px;
+  text-align: center;
+}
+.subtitle__presentation {
+  color: #008C9D;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.img__focus {
+  max-height: 300px;
+}
+.cta--turquoise {
+  font-size: 1.3em;
+  margin: 15px 0;
+  padding: 15px 15px;
+  text-transform: uppercase;
+  color: #008C9D;
+}
+.cta--turquoise:hover {
+  text-decoration: none;
+  color: white;
+  background-color: rgba(255, 255, 255, .05)
+}
+.cta--black {
+  font-size: 1.3em !important;
+  margin: 15px 0;
+  padding: 15px 15px;
+  text-transform: uppercase;
+  background: none;
+  border: none;
+}
+.cta--black:hover {
+  text-decoration: none;
+  color: #008C9D;
+  background-color: rgba(0, 0, 0, .05)
+}
+.footer {
+  background-color: lightgrey;
+  padding: 20px 0 20px 0;
+  margin-bottom: 0;
+}
