@@ -189,12 +189,16 @@
       <!-- Contact Section -->
       <!-- TODO: Validation live + server? -->
       <!-- TODO: test form -->
+      <!-- TODO: Thank you page using name="_next" -->
       <div class="uk-container-center uk-width-small-8-10 uk-width-medium-2-3 uk-width-large-1-2 background">
         <h1 class="section-title">Tell us about you</h1>
-        <form class="uk-form uk-text-center uk-margin-bottom" method="POST" action="http://formspree.io/marcoet@gmail.com">
+        <form id="contactform" class="uk-form uk-text-center uk-margin-bottom" method="POST">
           <fieldset>
             <div class="uk-form-row">
               <input class="uk-width-1-1" type="text" name="name" placeholder="Who are you?">
+            </div>
+            <div class="uk-form-row">
+              <input class="uk-width-1-1" type="text" name="_subject" placeholder="10 words to describe your wish">
             </div>
             <div class="uk-form-row">
               <textarea class="uk-width-1-1" name="message" rows="8" placeholder="What do you want us to know about you?"></textarea>
@@ -203,11 +207,17 @@
               <input class="uk-width-1-1" type="text" name="link" placeholder="Any link to see your work?">
             </div>
             <div class="uk-form-row">
-              <input class="uk-width-1-1" type="email" name="email" placeholder="your@email.here">
+              <input class="uk-width-1-1" type="email" name="_replyto" placeholder="your@email.here">
             </div>
             <div class="uk-form-row">
               <button class="cta--black" type="submit">send</button>
             </div>
+            <div class="uk-form-row uk-hidden">
+              <input type="text" name="_gotcha" style="display:none" />
+            </div>
+            <!-- <div class="uk-form-row uk-hidden">
+              <input type="hidden" name="_next" value="//mywebsite.com/thanks.html" />
+            </div> -->
           </fieldset>
         </form>
       </div>
@@ -223,5 +233,7 @@
       </footer>
       <!-- End of Footer -->
     </div>
+    <!-- Scripts -->
+    <script src="js/contact.js"></script>
   </body>
 </html>
