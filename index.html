@@ -10,8 +10,8 @@
     <link href="img/favicon.png" rel="shortcut icon">
 
     <!-- link all the styles -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="css/uikit.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="css/feed.css" />
 
     <!-- link all the scripts -->
@@ -32,8 +32,10 @@
       <!-- TODO: font -->
       <!-- IDEA: find why the flewbox does not wrap the 'let's get creative' -->
       <div class="uk-height-viewport uk-flex uk-flex-column uk-flex-middle uk-flex-space-around" style="min-height: 700px;" data-uk-scrollspy="{cls:'uk-animation-fade'}">
-        <img class="uk-margin-top" src="img/feed-500.png" alt="Feed by Design" />
-        <h2 class="text--turquoise uk-text-center">Thoughtfull <strong>Marketing</strong> and <strong>Design</strong> for the <strong>Self-Starter</strong></h2>
+        <div class="uk-flex uk-flex-column uk-flex-middle">
+          <img class="uk-text-center" src="img/feed-500.png" alt="Feed by Design" />
+          <h2 class="title-top uk-text-center">Thoughtfull <span class="title-top--bold">Marketing</span> and <span class="title-top--bold">Design</span> for the <span class="title-top--bold">Self-Starter</span></h2>
+        </div>
         <a class="cta--black" href="#focus-section" data-uk-smooth-scroll>
           Let's get creative
           <i class="uk-icon-arrow-down uk-text-center" style="display: block; margin-top: 10px;"></i>
@@ -41,6 +43,7 @@
       </div>
       <!-- End of Header Section -->
       <!-- Focus Section -->
+      <!-- IDEA: avoid space above small images when on mobile -->
       <div id="focus-section" class="background--turquoise background">
         <div class="uk-container uk-container-center" data-uk-scrollspy="{cls:'uk-animation-fade'}">
           <h1 class="section-title text--white">We focus on your needs</h1>
@@ -50,7 +53,7 @@
                 <img src="img/dragonfly.png" alt="" style="height: 150px" class="uk-vertical-align-bottom" />
               </div>
               <h2 class="subtitle__focus">Creativity over technology</h2>
-              <p class="uk-text-large">
+              <p class="text">
                 Real creativity and smart positionning is more important for Self-starters than any technology
               </p>
             </div>
@@ -59,7 +62,7 @@
                 <img src="img/fox.png" alt="" style="height: 150px" class="uk-vertical-align-bottom" />
               </div>
               <h2 class="subtitle__focus">Agile brand development</h2>
-              <p class="uk-text-large">
+              <p class="text">
                 A strong strategy and design from the start and the most essential material first to get you started quick while reducing cost
               </p>
             </div>
@@ -68,7 +71,7 @@
                 <img src="img/FEEDbyDesign_value_EN.png" alt="" style="height: 300px" class="img__focus" />
               </div>
               <h2 class="subtitle__focus">Graphic design with purpose</h2>
-              <p class="uk-text-large">
+              <p class="text">
                 Your identity determines your place on the market. The strongest identity is easily recognizable and eye candy
               </p>
             </div>
@@ -82,10 +85,12 @@
         <img class="uk-invisible" src="" width="" height="" alt="">
         <div class="uk-position-cover" style="background: rgba(0, 0, 0, .7);">
           <div class="uk-position-cover uk-flex uk-flex-center uk-flex-column uk-flex-middle uk-container uk-container-center" data-uk-scrollspy="{cls:'uk-animation-fade'}">
-            <h2 class="subtitle__focus">As a Self-Starter, you don't have time to waste trying to do this yourself</h2>
-            <p class="uk-text-large uk-text-center">
-              Stay focus on creating value with your product, we will make sure people recognize this value.
-            </p>
+            <div class="">
+              <h2 class="subtitle__focus">As a Self-Starter, you don't have time to waste trying to do this yourself</h2>
+              <p class="text uk-text-center">
+                Stay focus on creating value with your product, we will make sure people recognize this value
+              </p>
+            </div>
             <a class="cta--turquoise" href="#contact-section" data-uk-smooth-scroll>
               What do you do best?
             </a>
@@ -98,7 +103,7 @@
                 <div class="uk-vertical-align uk-text-center" style="background: url('img/post-it.JPG'); background-size: 100%; height: 250px;">
                     <div class="uk-vertical-align-middle uk-width-1-1">
                       <h2 class="uk-heading-medium subtitle__focus">As a Self-Starter, you don't have time to waste trying to do this yourself</h2>
-                      <p class="uk-text-large">
+                      <p class="text">
                         Stay focus on creating value with your product, we will make sure people recognize this value.
                       </p>
                       <div>

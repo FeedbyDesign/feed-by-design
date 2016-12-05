@@ -1,5 +1,9 @@
 body {
-  font-family: 'Roboto:300', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Roboto", "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 ::-moz-selection { /* Code for Firefox */
   background: rgb(43, 201, 175);
@@ -26,28 +30,43 @@ body {
   background-repeat: no-repeat;
   min-height: 320px;
 }
+.img-top {
+  margin: auto;
+}
 .text--white {
   color: white;
 }
-.text--turquoise {
+.title-top {
   color: rgb(43, 201, 175);
-  font-family: cursive !important;
+  font-weight: 300;
+  font-family: "Roboto", "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.title-top--bold {
+  font-weight: 400;
 }
 .section-title {
   margin-bottom: 50px;
   text-align: center;
+  font-family: "Roboto", "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 .subtitle__focus {
   color: white;
-  font-weight: bold;
+  font-weight: 500;
+  font-size: 1.5em;
   margin-top: 40px;
   text-align: center;
+  font-family: "Roboto", "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.text {
+  font-size: 1.2em;
+  font-family: "Roboto", "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 .subtitle__presentation {
   color: rgb(43, 201, 175);
   font-size: 1.5em;
   margin-bottom: 10px;
   margin-top: 10px;
+  font-family: "Roboto", "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 .img-focus__wrapper {
   height: 300px;
@@ -63,6 +82,7 @@ body {
   padding: 15px 15px;
   text-transform: uppercase;
   color: rgb(43, 201, 175);
+  font-family: "Roboto", "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 .cta--turquoise:hover {
   text-decoration: none;
@@ -77,6 +97,7 @@ body {
   background: none;
   border: none;
   color: rgb(43, 201, 175);
+  font-family: "Roboto", "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 .cta--black:hover {
   text-decoration: none;
