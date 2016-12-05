@@ -1,5 +1,11 @@
 body {
-  font-family: 'Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Roboto:300', "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+::-moz-selection { /* Code for Firefox */
+  background: rgb(43, 201, 175);
+}
+::selection {
+  background: rgb(43, 201, 175);
 }
 .background--turquoise {
   background-color: rgb(43, 201, 175);
@@ -25,6 +31,7 @@ body {
 }
 .text--turquoise {
   color: rgb(43, 201, 175);
+  font-family: cursive !important;
 }
 .section-title {
   margin-bottom: 50px;
