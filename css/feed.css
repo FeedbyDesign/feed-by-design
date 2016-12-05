@@ -12,7 +12,8 @@ h1, h2, h3, h4, h5, h6 {
   background: rgb(43, 201, 175);
 }
 input:focus, textarea:focus {
-    background-color: rgba(43, 201, 175, .1) !important;
+  background-color: rgba(43, 201, 175, .05) !important;
+  border-color: rgb(43, 201, 175) !important;
 }
 .background--turquoise {
   background-color: rgb(43, 201, 175);
