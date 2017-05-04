@@ -17,8 +17,8 @@ const options = {
   baseLineHeight: 1.382,
   scaleRatio: 2.618,
   // blockMarginBottom: 0.809, // Default to 1 rhythm = baseLineHeight
-  headerFontFamily: [`Quicksand`, `sans-serif`],
-  bodyFontFamily: [`Quicksand`, `sans-serif`],
+  headerFontFamily: [`Roboto`, `sans-serif`],
+  bodyFontFamily: [`Roboto`, `sans-serif`],
   headerColor: COLOR1,
   bodyColor: COLOR1,
   bodyWeight: 500,

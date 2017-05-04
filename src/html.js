@@ -34,19 +34,19 @@ module.exports = React.createClass({
         <head>
           <link
             rel="preload"
-            href={`/static/quicksand-latin-500.cf60f1b7.woff2`}
+            href={`/static/roboto-latin-400.7e367be0.woff2`}
             as="font"
             crossOrigin
           />
           <link
             rel="preload"
-            href={`/static/quicksand-latin-700.46e07327.woff2`}
+            href={`/static/roboto-latin-500.bb474f16.woff2`}
             as="font"
             crossOrigin
           />
           <link
             rel="preload"
-            href={`/static/permanent-marker-latin-400.1b684b8d.woff2`}
+            href={`/static/roboto-latin-700.0d7e71f2.woff2`}
             as="font"
             crossOrigin
           />
