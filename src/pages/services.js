@@ -1,7 +1,6 @@
 import React from 'react'
 import { Helmet } from "react-helmet"
 
-
 import { rhythm, scale } from "../utils/typography"
 import {
   COLOR1,
@@ -13,7 +12,6 @@ import {
 
 class Services extends React.Component {
   render() {
-    console.log('LOG', this.props);
 
     return (
       <div>
@@ -59,8 +57,13 @@ query Services {
     }
     content
     frontmatter {
-      image {
-        id
+    	image {
+        childImageSharp {
+          responsiveResolution(width: 75, height: 75) {
+            src
+            srcSet
+          }
+        }
       }
     }
   }

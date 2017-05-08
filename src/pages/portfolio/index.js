@@ -1,6 +1,6 @@
 import React from 'react'
 import { Helmet } from "react-helmet"
-
+import Link from 'gatsby-link'
 
 import { rhythm, scale } from "../../utils/typography"
 import {
@@ -27,7 +27,15 @@ class Portfolio extends React.Component {
         </Helmet>
 
         <h2>Portfolio</h2>
-
+        <ul>
+          {
+            this.props.data.allMarkdownRemark.edges.map(({ node })=>{
+              return (
+                <li key={node.id}><Link to={`/portfolio/${node.frontmatter.slug}/`}>{node.frontmatter.name}</Link></li>
+              )
+            })
+          }
+        </ul>
       </div>
     )
   }
@@ -35,11 +43,21 @@ class Portfolio extends React.Component {
 
 export default Portfolio
 
-// export const pageQuery = `
-// query {
-//
-// }
-// `
+export const pageQuery = graphql`
+query Portfolio {
+  allMarkdownRemark (id: {regex: "/portfolio/i"}) {
+    edges {
+      node {
+        id
+        frontmatter {
+          name
+          slug
+        }
+      }
+    }
+  }
+}
+`
 
 // sortBy: { order: DESC, fields: [frontmatter___date] },
 //     frontmatter: { draft: { ne: true } },
