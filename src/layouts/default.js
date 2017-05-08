@@ -42,7 +42,7 @@ class DefaultLayout extends React.Component {
       <div css={{position: `relative`}}>
         <Helmet
           defaultTitle="Graphic Design & websites - Exciting professional branding | Feed by Design"
-          titleTemplate="%s - Exciting professional branding | Feed by Design"
+          titleTemplate="%s | Feed by Design"
         >
           {/* html attributes: <html lang="en" amp /> */}
           {/* body attributes: <body className="root" /> */}
@@ -50,7 +50,7 @@ class DefaultLayout extends React.Component {
           {/* base element: <base target="_blank" href="http://mysite.com/" /> */}
           {/* multiple meta elements */}
           <meta property="og:type" content="website" />
-          {/*<meta property="og:image" content="" />*/}
+          <meta property="og:image" content="http://feedbydesign.netlify.com/static/feed-500.e761b52a.png" />
           <meta property="og:site_name" content="Feed by Design" />
           {/* multiple link elements */}
           <link
@@ -62,7 +62,7 @@ class DefaultLayout extends React.Component {
         </Helmet>
 
         <Menu />
-
+        {this.props.children}
       </div>
     )
   }
