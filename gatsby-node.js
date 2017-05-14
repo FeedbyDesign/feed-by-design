@@ -44,7 +44,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
       }
 
       // Create image post pages.
-      const projectTemplate = path.resolve(`src/templates/project-page.js`)
+      const pageTemplate = path.resolve(`./src/templates/project-page.js`)
       // We want to create a detailed page for each
       // Instagram post. Since the scrapped Instagram data
       // already includes an ID field, we just use that for
@@ -58,8 +58,8 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
           // as a template component. The `context` is
           // optional but is often necessary so the template
           // can query data specific to each page.
-          path: `/portfolio/${slug(edge.node.frontmatter.slug)}`,
-          component: slash(projectTemplate),
+          path: `/portfolio/${edge.node.frontmatter.slug}/`,
+          component: slash(pageTemplate),
           context: {
             id: edge.node.id,
           },
