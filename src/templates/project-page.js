@@ -1,6 +1,5 @@
 import * as PropTypes from "prop-types"
 import React from "react"
-import { Helmet } from 'react-helmet'
 
 class ProjectTemplate extends React.Component {
   // static propTypes = {
@@ -13,15 +12,6 @@ class ProjectTemplate extends React.Component {
     const logoColor = projectDetails.logoColor.childImageSharp.responsiveSizes
     return (
       <div>
-        <Helmet>
-          <html lang="en" />
-          <title>{`${projectDetails.name}`}</title>
-          <meta property="og:title" content={`${projectDetails.name} | Feed by Design`} />
-          <meta name="description" content={`${projectDetails.metaDescription}`} />
-          <meta property="og:description" content={`${projectDetails.metaDescription}`} />
-          <link rel="canonical" href={`https://www.feedbydesign.com/portfolio/${projectDetails.slug}/`} />
-          <meta property="og:url" content={`https://www.feedbydesign.com/portfolio/${projectDetails.slug}/`} />
-        </Helmet>
 
         <h2>{projectDetails.name}</h2>
         <ul>
@@ -75,3 +65,39 @@ export const pageQuery = graphql`
     }
   }
 `
+
+// import * as PropTypes from "prop-types"
+// import React from "react"
+// import PostDetail from "../components/post-detail"
+//
+// class PostTemplate extends React.Component {
+//   static propTypes = {
+//     data: PropTypes.shape({
+//       postsJson: PropTypes.object.isRequired,
+//     }),
+//   }
+//   render() {
+//     return (
+//       // PostDetail is used for this detail page and
+//       // also in the modal.
+//       <PostDetail post={this.props.data.postsJson} />
+//     )
+//   }
+// }
+//
+// export default PostTemplate
+//
+// // The post template's GraphQL query. Notice the “id”
+// // variable which is passed in. We set this on the page
+// // context in gatsby-node.js.
+// //
+// // All GraphQL queries in Gatsby are run at build-time and
+// // loaded as plain JSON files so have minimal client cost.
+// export const pageQuery = graphql`
+//   query PostPage($id: String!) {
+//     # Select the post which equals this id.
+//     postsJson(id: { eq: $id }) {
+//       ...PostDetail_details
+//     }
+//   }
+// `

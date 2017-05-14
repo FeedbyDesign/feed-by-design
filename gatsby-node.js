@@ -8,6 +8,7 @@ const slash = require(`slash`)
 // called after the Gatsby bootstrap is finished so you have
 // access to any information necessary to programatically
 // create pages.
+
 exports.createPages = ({ graphql, boundActionCreators }) => {
   const { upsertPage } = boundActionCreators
 

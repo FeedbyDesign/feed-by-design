@@ -1,5 +1,6 @@
-# Feed by Design
+# Gatsbygram
 
-http://www.feedbydesign.com/
+https://gatsbygram.gatsbyjs.org/
 
-Website under construction
+Built with Gatsby 1.0 (Alpha 11) as a demo of Gatsby's new built-in
+image processing capabilities.

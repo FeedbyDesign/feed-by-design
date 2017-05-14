@@ -3,6 +3,19 @@ module.exports = {
     title: `Feed by Design`,
   },
   plugins: [
+    /*
+     * Gatsby's data processing layer begins with “source”
+     * plugins.  You can source data nodes from anywhere but
+     * most sites, like Gatsbygram, will include data from
+     * the filesystem so we start here with
+     * “gatsby-source-filesystem”.
+     *
+     * A site can have as many instances of
+     * gatsby-source-filesystem as you need.  Each plugin
+     * instance is configured with a root path where it then
+     * recursively reads in files and adds them to the data
+     * tree.
+     */
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -16,7 +29,10 @@ module.exports = {
     `gatsby-plugin-sharp`,
     // This plugin identifies file nodes that are images and
     // transforms these to create new “ImageSharp” nodes.
+    // With them you can resize images and
+    // generate responsive image thumbnails.
     `gatsby-transformer-sharp`,
+    // This plugin transforms JSON file nodes.
     `gatsby-transformer-json`,
     // This plugin sets up the popular css-in-js library
     // Glamor. It handles adding a Babel plugin and webpack
@@ -47,18 +63,19 @@ module.exports = {
       },
     },
     `gatsby-plugin-catch-links`,
+    // This plugin takes your configuration and generates a
+    // web manifest file so Gatsbygram can be added to your
+    // homescreen on Android.
 
-    // // This plugin takes your configuration and generates a
-    // // web manifest file so Gatsbygram can be added to your
-    // // homescreen on Android.
+
     // {
     //   resolve: `gatsby-plugin-manifest`,
     //   options: {
-    //     name: `Wanna Play`,
-    //     short_name: `Wanna Play`,
+    //     name: `Gatsbygram`,
+    //     short_name: `Gatsbygram`,
     //     start_url: `/`,
-    //     background_color: `#DB4D69`,
-    //     theme_color: `#0F4DBC`,
+    //     background_color: `#f7f7f7`,
+    //     theme_color: `#191919`,
     //     display: `minimal-ui`,
     //   },
     // },
@@ -67,13 +84,13 @@ module.exports = {
     // // resistant to bad networks. Works with almost any
     // // site!
     // `gatsby-plugin-offline`,
-
-    // This plugin sets up Google Analytics for you.
+    // // This plugin sets up Google Analytics for you.
     // {
     //   resolve: `gatsby-plugin-google-analytics`,
     //   options: {
-    //     trackingId: `UA--2`,
+    //     trackingId: `UA-91652198-1`,
     //   },
     // },
-  ]
+    
+  ],
 }

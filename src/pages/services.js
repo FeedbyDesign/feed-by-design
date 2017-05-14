@@ -1,5 +1,4 @@
 import React from 'react'
-import { Helmet } from "react-helmet"
 
 import { rhythm, scale } from "../utils/typography"
 import {
@@ -15,15 +14,6 @@ class Services extends React.Component {
 
     return (
       <div>
-        <Helmet>
-          <html lang="en" />
-          <title>Services</title>
-          <meta property="og:title" content="Services | Feed by Design" />
-          <meta name="description" content="Marketing Strategy gives the vision. Graphic Design trigers emotions. Web Presence so that people hear you load and clear." />
-          <meta property="og:description" content="Marketing Strategy gives the vision. Graphic Design trigers emotions. Web Presence so that people hear you load and clear." />
-          <link rel="canonical" href="https://www.feedbydesign.com/services/" />
-          <meta property="og:url" content="https://www.feedbydesign.com/services/" />
-        </Helmet>
 
         <ul>
           <li>
@@ -35,6 +25,8 @@ class Services extends React.Component {
           </li>
           <li>Graphic Design</li>
           <li>Website</li>
+          <img src={this.props.data.strategyMd.frontmatter.image.childImageSharp.responsiveResolution.src} />
+          {console.log(this.props.data.strategyMd.frontmatter.image.childImageSharp)}
         </ul>
 
       </div>
@@ -69,20 +61,3 @@ query Services {
   }
 }
 `
-
-// sortBy: { order: DESC, fields: [frontmatter___date] },
-//     frontmatter: { draft: { ne: true } },
-//     fileAbsolutePath: { regex: "/blog/" },
-
-// query Image($name: fileNameQueryString!){
-//   file (name: $name) {
-//     id
-//     ext
-//     name
-// 		 base
-//     relativePath
-//     type
-//     mediaType
-//
-//   }
-// }
