@@ -4,8 +4,8 @@ name: Un Autre Moment
 metaDescription: Un Autre Moment
 url: unmomentasoi.eu
 imgCover:
-logoColor: LOGO_base-line.png
-logoNB: favicon.png
+logoColor: 'LOGO_base-line.png'
+logoNB: 'favicon.png'
 imgScreenLarge: unmomentasoi.eu_large.png
 imgScreenMedium: unmomentasoi.eu_medium.png
 imgScreenSmall: unmomentasoi.eu_small.png

@@ -53,7 +53,6 @@ export default ProjectTemplate
 // loaded as plain JSON files so have minimal client cost.
 export const pageQuery = graphql`
   query ProjectPage($id: String!) {
-    # Select the project which equals this id.
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         name
