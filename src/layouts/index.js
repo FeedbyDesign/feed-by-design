@@ -75,7 +75,7 @@ class DefaultLayout extends React.Component {
             flexGrow: 1
           }}
         >
-          {this.props.children}
+          {this.props.children()}
         </div>
         <Footer />
       </div>
