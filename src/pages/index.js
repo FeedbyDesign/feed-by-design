@@ -22,23 +22,23 @@ const contact = {
 class Index extends React.Component {
   render() {
 
-    // Outputs array of images with 'sizes' key {big: ..., tiny: ...}
-    const images = {}
-    const queryImages = this.props.data.allFile.edges
-    _.forEach(queryImages, function({ node }) {
-      images[node.base] = node
-      images[node.base].sizes = node.children[0]
-    })
+    // // Outputs array of images with 'sizes' key {big: ..., tiny: ...}
+    // const images = {}
+    // const queryImages = this.props.data.allFile.edges
+    // _.forEach(queryImages, function({ node }) {
+    //   images[node.base] = node
+    //   images[node.base].sizes = node.children[0]
+    // })
 
 // TODO: description
     return (
       <div>
         <Helmet>
           <html lang="en" />
-          <title>Graphic Design & websites</title>
+          <title>Graphic Design & websites - Exciting professional branding</title>
           <meta property="og:title" content="Graphic Design & websites - Exciting professional branding | Feed by Design" />
-          <meta name="description" content="" />
-          <meta property="og:description" content="" />
+          <meta name="description" content="Strategy, Graphic Design and Websites for Entrepreneurs. We have a passion for creating exciting and coherent professionnal identities." />
+          <meta property="og:description" content="Strategy, Graphic Design and Websites for Entrepreneurs. We have a passion for creating exciting and coherent professionnal identities." />
           <link rel="canonical" href="https://www.feedbydesign.com" />
           <meta property="og:url" content="https://www.feedbydesign.com" />
         </Helmet>

@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Wanna Play`,
+    title: `Feed by Design`,
   },
   plugins: [
     {
@@ -17,18 +17,36 @@ module.exports = {
     // This plugin identifies file nodes that are images and
     // transforms these to create new “ImageSharp” nodes.
     `gatsby-transformer-sharp`,
-    // This plugin transforms JSON file nodes.
-    // `gatsby-transformer-json`,
-    `gatsby-typegen-filesystem`,
-    // This plugin adds GraphQL fields to the ImageSharp
-    // GraphQL type. With them you can resize images and
-    // generate sets of responsive images.
-    `gatsby-typegen-sharp`,
+    `gatsby-transformer-json`,
     // This plugin sets up the popular css-in-js library
     // Glamor. It handles adding a Babel plugin and webpack
     // configuration as well as setting up optimized server
     // rendering and client re-hydration.
     `gatsby-plugin-glamor`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-responsive-image`,
+            options: {
+              maxWidth: 690,
+              backgroundColor: `#f7f0eb`,
+            },
+          },
+          {
+            resolve: `gatsby-remark-responsive-iframe`,
+            options: {
+              wrapperStyle: `margin-bottom: 1.05rem`,
+            },
+          },
+          `gatsby-remark-copy-linked-files`,
+          `gatsby-remark-smartypants`,
+          `gatsby-remark-autolink-headers`,
+        ],
+      },
+    },
+    `gatsby-plugin-catch-links`,
 
     // // This plugin takes your configuration and generates a
     // // web manifest file so Gatsbygram can be added to your

@@ -13,7 +13,7 @@ import {
 
 
 const options = {
-  baseFontSize: `20px`,
+  baseFontSize: `16px`,
   baseLineHeight: 1.382,
   scaleRatio: 2.618,
   // blockMarginBottom: 0.809, // Default to 1 rhythm = baseLineHeight
@@ -70,7 +70,7 @@ const options = {
     [TABLET_MEDIA_QUERY]: {
       // Make baseFontSize on mobile 18px.
       html: {
-        fontSize: `${18 / 20 * 100}%`,
+        // fontSize: `${18 / 20 * 100}%`,
       },
     },
     // [MOBILE_MEDIA_QUERY]: {

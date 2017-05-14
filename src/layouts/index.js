@@ -5,6 +5,7 @@ import Link from "gatsby-link"
 import 'typeface-roboto'
 
 import Menu from '../components/Menu'
+import Footer from '../components/Footer'
 
 import { rhythm, scale } from "../utils/typography"
 import presets from '../utils/presets'
@@ -39,10 +40,17 @@ class DefaultLayout extends React.Component {
   render() {
 
     return (
-      <div css={{position: `relative`}}>
+      <div
+        css={{
+          position: `relative`,
+          display: `flex`,
+          flexFlow: `column`,
+          height: `100vh`
+        }}
+      >
         <Helmet
           defaultTitle="Graphic Design & websites - Exciting professional branding | Feed by Design"
-          titleTemplate="%s - Exciting professional branding | Feed by Design"
+          titleTemplate="%s | Feed by Design"
         >
           {/* html attributes: <html lang="en" amp /> */}
           {/* body attributes: <body className="root" /> */}
@@ -50,7 +58,7 @@ class DefaultLayout extends React.Component {
           {/* base element: <base target="_blank" href="http://mysite.com/" /> */}
           {/* multiple meta elements */}
           <meta property="og:type" content="website" />
-          {/*<meta property="og:image" content="" />*/}
+          <meta property="og:image" content="http://feedbydesign.netlify.com/static/feed-500.e761b52a.png" />
           <meta property="og:site_name" content="Feed by Design" />
           {/* multiple link elements */}
           <link
@@ -62,7 +70,14 @@ class DefaultLayout extends React.Component {
         </Helmet>
 
         <Menu />
-
+        <div
+          css={{
+            flexGrow: 1
+          }}
+        >
+          {this.props.children()}
+        </div>
+        <Footer />
       </div>
     )
   }
